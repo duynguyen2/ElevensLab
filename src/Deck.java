@@ -39,6 +39,7 @@ public class Deck {
 		for (int i = 0; i < ranks.length; i++) {
 			Card card = new Card(ranks[i], suits[i], values[i]);
 			cards.add(card);
+			size++;
 		}
 	}
 
@@ -85,6 +86,7 @@ public class Deck {
 			Card card = new Card(cards.get(cards.size() - 1).rank(), cards.get(cards.size() - 1).suit(),
 					cards.get(cards.size() - 1).pointValue());
 			cards.remove(cards.size() - 1);
+			size--;
 			return card;
 		} else
 			return null;
